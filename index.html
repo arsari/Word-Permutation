@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Word Permutation</title>
+    <link rel="stylesheet" href="./master.css">
+</head>
+
+<body>
+    <main id="app">
+        <header>
+            <nav class="nav-bar">v2.0.180929</nav>
+            <div class="input-area">
+                <label for="word">Enter word to evaluated => </label>
+                <input type="text" name="word" id="word" />
+                <button type="submit" onclick="eval()">Evaluated</button>
+            </div>
+        </header>
+        <section id="result" class="result-area">
+        </section>
+        <footer class="base">
+            <p>
+                < /> with &hearts; by ARSARI
+            </p>
+        </footer>
+    </main>
+    <script src="./main.js" charset="utf-8"></script>
+    <script>
+        function eval() {
+            let box = document.getElementById('word');
+            let str = box.value;
+
+            if (!/^[a-zA-Z]*$/g.test(str) || str == "") {
+                alert("Invalid characters");
+                box.focus();
+                return false;
+            } else {
+                let res = permutation(str);
+
+                return document.getElementById('result').innerHTML =
+                    `<p>Word ${str.toUpperCase()} has a total of ${res.len} characters.</p><p>Repetitions ${JSON.stringify(res.rep)}</p><p>There are ${res.perm} permutations of the word ${str.toUpperCase()}.</p>`
+            }
+        }
+    </script>
+</body>
+
+</html>
