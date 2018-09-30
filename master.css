@@ -1,0 +1,21 @@
+.nav-bar {
+    background-color: darkgrey;
+    padding: 10px 10px 10px 0;
+    text-align: right;
+}
+
+.input-area {
+    padding: 50px 0 25px 50px;
+}
+
+.result-area {
+    font-size: 2em;
+    text-align: center;
+}
+
+.base {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
