@@ -8,9 +8,27 @@
     padding: 50px 0 25px 50px;
 }
 
+input, button {
+    font-size: .75em;
+}
+
+button {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+}
+
 .result-area {
     font-size: 2em;
     text-align: center;
+    font-weight: 600;
+}
+
+span {
+    color: blue;
 }
 
 .base {
@@ -18,4 +36,9 @@
     color: white;
     padding: 10px 0;
     text-align: center;
+    font-size: 1.25em;
+}
+
+.base span {
+    color: red;
 }

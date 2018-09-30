@@ -12,18 +12,20 @@
 <body>
     <main id="app">
         <header>
-            <nav class="nav-bar">v2.0.18030</nav>
+            <nav class="nav-bar">v2.2.18030</nav>
             <div class="input-area">
-                <label for="word">Enter word to evaluated => </label>
-                <input type="text" name="word" id="word" />
-                <button type="submit" onclick="eval()">Evaluated</button>
+                <h1>
+                    <label for="word">Enter word to evaluated => </label>
+                    <input type="text" name="word" id="word" />
+                    <button type="submit" onclick="eval()">Evaluated</button>
+                </h1>
             </div>
         </header>
         <section id="result" class="result-area">
         </section>
         <footer class="base">
             <p>
-                < /> with &hearts; by ARSARI
+                < / > with <span>&hearts;</span> by ARSARI
             </p>
         </footer>
     </main>
@@ -41,9 +43,10 @@
                 let res = permutation(str);
 
                 return document.getElementById('result').innerHTML =
-                    `<p>Word ${str.toUpperCase()} has a total of ${res.len} characters.</p><p>Repetitions ${JSON.stringify(res.rep)}</p><p>There are ${res.perm} permutations of the word ${str.toUpperCase()}.</p>`
+                    `<p>Word <span>${str.toUpperCase()}</span> has a total of <span>${res.len}</span> characters.</p><p>Repetitions <span>${JSON.stringify(res.rep)}</span></p><p>There are <span>${res.perm}</span> permutations of the word <span>${str.toUpperCase()}</span>.</p>`
             }
         }
+
     </script>
 </body>
 
