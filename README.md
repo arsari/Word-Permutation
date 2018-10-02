@@ -1,6 +1,7 @@
-# Word Permutation
+# Distinguishable Permutations
+
 ---
-Calculate the amount of permutation ways a word can be combined. App run in browser as well in command line.
+Calculate the amount of distinguishable permutations of the letters in word. App run in browser as well in command line.
 
 _To executed in command line type `node start`_
 

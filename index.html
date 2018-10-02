@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Word Permutation</title>
+    <title>Distinguishable Permutations</title>
     <link rel="stylesheet" href="./master.css">
 </head>
 
 <body>
     <main id="app">
         <header>
-            <nav class="nav-bar">v2.2.18030</nav>
+            <nav class="nav-bar">v2.3.181001</nav>
             <div class="input-area">
                 <h1>
-                    <label for="word">Enter word to evaluated => </label>
+                    <label for="word">Find the number of distinguishable permutations of the letters in => </label>
                     <input type="text" name="word" id="word" />
-                    <button type="submit" onclick="eval()">Evaluated</button>
+                    <button type="submit" onclick="eval()">Evaluate</button>
                 </h1>
             </div>
         </header>
@@ -29,6 +29,14 @@
             </p>
         </footer>
     </main>
+    <!-- scripts -->
+    <script>
+        window._trackJs = {
+            token: "15bf2f06756a424c81cab2283d2e965d",
+            application: "snhu-mat230"
+        };
+    </script>
+    <script src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
     <script src="./main.js" charset="utf-8"></script>
     <script>
         function eval() {
@@ -43,7 +51,7 @@
                 let res = permutation(str);
 
                 return document.getElementById('result').innerHTML =
-                    `<p>Word <span>${str.toUpperCase()}</span> has a total of <span>${res.len}</span> characters.</p><p>Repetitions <span>${JSON.stringify(res.rep)}</span></p><p>There are <span>${res.perm}</span> permutations of the word <span>${str.toUpperCase()}</span>.</p>`
+                    `<p>Word <span>${str.toUpperCase()}</span> has a total of <span>${res.len}</span> characters.</p><p>Repeated letters: <span>${JSON.stringify(res.rep)}</span></p><p>There are <span>${res.perm}</span> permutations of the word <span>${str.toUpperCase()}</span>.</p>`
             }
         }
 

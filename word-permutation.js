@@ -14,7 +14,7 @@ const schema = {
             message: 'Word must be only letters.',
             required: true,
         },
-  },
+    },
 };
 
 prompt.start();
@@ -23,10 +23,10 @@ prompt.get(schema, (err, result) => {
     if (err) {
         return onErr(err);
     }
-
+    console.log('Distinguishable Permutations');
     const res = permutation(result.word);
 
-    console.log(`\nWord "${result.word.toUpperCase()}" has a total of ${res.len} characters.`);
-    console.log(`\nRepetitions ${JSON.stringify(res.rep)}`);
+    console.log(`\nWord ${result.word.toUpperCase()} has a total of ${res.len} characters.`);
+    console.log(`\nRepeated letters: ${JSON.stringify(res.rep)}`);
     console.log(`\nThere are ${res.perm} permutations of the word ${result.word.toUpperCase()}.\n`);
 });

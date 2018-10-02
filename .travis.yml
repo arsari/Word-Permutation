@@ -1,0 +1,7 @@
+# for continuous integration server...
+# need to created a git repositiry for the project and push to github.
+# them, login in travis-ci.org and create account using github account.
+
+language: node_js
+node_js:
+    - "10"
