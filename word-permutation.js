@@ -28,5 +28,5 @@ prompt.get(schema, (err, result) => {
 
     console.log(`\nWord ${result.word.toUpperCase()} has a total of ${res.len} characters.`);
     console.log(`\nRepeated letters: ${JSON.stringify(res.rep)}`);
-    console.log(`\nThere are ${res.perm} permutations of the word ${result.word.toUpperCase()}.\n`);
+    console.log(`\nThere are ${res.perm.Locale.String()} permutations of the word ${result.word.toUpperCase()}.\n`);
 });

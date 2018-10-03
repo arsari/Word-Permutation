@@ -12,7 +12,7 @@
 <body>
     <main id="app">
         <header>
-            <nav class="nav-bar">v2.3.181001</nav>
+            <nav class="nav-bar">v2.4.181002</nav>
             <div class="input-area">
                 <h1>
                     <label for="word">Find the number of distinguishable permutations of the letters in => </label>
@@ -24,7 +24,7 @@
         <section id="result" class="result-area">
         </section>
         <footer class="base">
-            <p>
+            <>
                 < / > with <span>&hearts;</span> by ARSARI
             </p>
         </footer>
@@ -51,7 +51,7 @@
                 let res = permutation(str);
 
                 return document.getElementById('result').innerHTML =
-                    `<p>Word <span>${str.toUpperCase()}</span> has a total of <span>${res.len}</span> characters.</p><p>Repeated letters: <span>${JSON.stringify(res.rep)}</span></p><p>There are <span>${res.perm}</span> permutations of the word <span>${str.toUpperCase()}</span>.</p>`
+                    `<p>Word <span>${str.toUpperCase()}</span> has a total of <span>${res.len}</span> characters.</p><p>Repeated letters: <span>${JSON.stringify(res.rep)}</span></p><p>There are <span>${res.perm.toLocaleString()}</span> permutations of the word <span>${str.toUpperCase()}</span>.</p>`
             }
         }
 
