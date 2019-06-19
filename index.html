@@ -16,7 +16,7 @@
   </header>
   <main id="app">
     <section>
-      <nav class="nav-bar">v2.6.181208</nav>
+      <nav class="nav-bar">v2.7.190618</nav>
       <div id="input" class="input-area">
         <h1>
           <label for="word">Find the number of distinguishable permutations of the letters in => </label>
@@ -45,18 +45,18 @@
   <script src="./main.js" charset="utf-8"></script>
   <script>
     function eval() {
-      let box = document.getElementById('word');
-      let str = box.value;
+      let string = document.getElementById('word');
+      let userString = str.value;
 
-      if (!/^[a-zA-Z]*$/g.test(str) || str == "") {
+      if (!/^[a-zA-Z]*$/g.test(userString) || userString == "") {
         alert("Invalid characters");
-        box.focus();
+        str.focus();
         return false;
       } else {
-        let res = permutation(str);
+        let result = permutation(userString);
 
         return document.getElementById('result').innerHTML =
-          `<p>Word <span>${str.toUpperCase()}</span> has a total of <span>${res.len}</span> characters.</p><p>Repeated letters: <span>${JSON.stringify(res.rep)}</span></p><p>There are <span>${res.perm.toLocaleString()}</span> permutations of the word <span>${str.toUpperCase()}</span>.</p>`
+          `<p>Word <span>${userString.toUpperCase()}</span> has a total of <span>${result.lengths}</span> characters.</p><p>Repeated letters: <span>${JSON.stringify(result.repeated)}</span></p><p>There are <span>${result.permutations.toLocaleString()}</span> permutations of the word <span>${userString.toUpperCase()}</span>.</p>`
       }
     }
 

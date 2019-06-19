@@ -1,32 +1,34 @@
 const prompt = require('prompt');
 const permutation = require('./main');
 
-function onErr(err) {
-    console.log(err);
-    return 1;
+function onError(error) {
+  console.log(error);
+  return 1;
 }
 
 const schema = {
-    properties: {
-        word: {
-            description: 'Enter a word',
-            pattern: /^[a-zA-Z]+$/,
-            message: 'Word must be only letters.',
-            required: true,
-        },
+  properties: {
+    word: {
+      description: 'Enter a word',
+      pattern: /^[a-zA-Z]+$/,
+      message: 'Word must be only letters.',
+      required: true,
     },
+  },
 };
 
 prompt.start();
 
-prompt.get(schema, (err, result) => {
-    if (err) {
-        return onErr(err);
-    }
-    console.log('Distinguishable Permutations');
-    const res = permutation(result.word);
+prompt.get(schema, (error, user) => {
+  if (error) {
+    return onError(error);
+  }
+  console.log('Distinguishable Permutations');
+  const result = permutation(user.word);
 
-    console.log(`\nWord ${result.word.toUpperCase()} has a total of ${res.len} characters.`);
-    console.log(`\nRepeated letters: ${JSON.stringify(res.rep)}`);
-    console.log(`\nThere are ${res.perm.Locale.String()} permutations of the word ${result.word.toUpperCase()}.\n`);
+  console.log(`\nWord ${user.word.toUpperCase()} has a total of ${result.lengths} characters.`);
+  console.log(`\nRepeated letters: ${JSON.stringify(result.repeated)}`);
+  console.log(
+    `\nThere are ${result.permutations.toLocaleString()} permutations of the word ${user.word.toUpperCase()}.\n`
+  );
 });
