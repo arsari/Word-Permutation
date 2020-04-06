@@ -23,7 +23,7 @@ prompt.get(schema, (error, user) => {
   if (error) {
     return onError(error);
   }
-  console.log('Distinguishable Permutations');
+  console.log('\nDistinguishable Permutations');
   const result = permutation(user.word);
 
   console.log(`\nWord ${user.word.toUpperCase()} has a total of ${result.lengths} characters.`);

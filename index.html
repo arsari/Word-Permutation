@@ -1,66 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Distinguishable Permutations</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Caveat"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Distinguishable Permutations</title>
-  <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
-</head>
+  <body>
+    <header id="title">
+      <h1>Permutations of a Word</h1>
+    </header>
+    <main id="app">
+      <section>
+        <nav class="nav-bar">v2.8.200406</nav>
+        <div id="input" class="input-area">
+          <h1>
+            <label for="word"
+              >Find the number of distinguishable permutations of the letters in
+              =>
+            </label>
+            <input type="text" name="word" id="word" />
+            <button type="submit" onclick="eval()">Evaluate</button>
+          </h1>
+        </div>
+      </section>
+      <section id="result" class="result-area"></section>
+      <section class="base">
+        <p>< /> with <span>&hearts;</span> by ARSARI</p>
+      </section>
+    </main>
+    <!-- scripts -->
+    <script>
+      window._trackJs = {
+        token: "15bf2f06756a424c81cab2283d2e965d",
+        application: "snhu-mat230",
+      };
+    </script>
+    <script src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
+    <script src="./main.js" charset="utf-8"></script>
+    <script>
+      function eval() {
+        let string = document.getElementById("word");
+        let userString = string.value;
 
-<body>
-  <header id="title">
-    <h1>Permutations of a Word</h1>
-  </header>
-  <main id="app">
-    <section>
-      <nav class="nav-bar">v2.7.190618</nav>
-      <div id="input" class="input-area">
-        <h1>
-          <label for="word">Find the number of distinguishable permutations of the letters in => </label>
-          <input type="text" name="word" id="word" />
-          <button type="submit" onclick="eval()">Evaluate</button>
-        </h1>
-      </div>
-    </section>
-    <section id="result" class="result-area">
-    </section>
-    <section class="base">
-      <p>
-        < /> with <span>&hearts;</span> by ARSARI
-      </p>
-    </section>
-  </main>
-  <!-- scripts -->
-  <script>
-    window._trackJs = {
-      token: "15bf2f06756a424c81cab2283d2e965d",
-      application: "snhu-mat230"
-    };
+        if (!/^[a-zA-Z]*$/g.test(userString) || userString == "") {
+          alert("Invalid characters");
+          str.focus();
+          return false;
+        } else {
+          let result = permutation(userString);
 
-  </script>
-  <script src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
-  <script src="./main.js" charset="utf-8"></script>
-  <script>
-    function eval() {
-      let string = document.getElementById('word');
-      let userString = string.value;
-
-      if (!/^[a-zA-Z]*$/g.test(userString) || userString == "") {
-        alert("Invalid characters");
-        str.focus();
-        return false;
-      } else {
-        let result = permutation(userString);
-
-        return document.getElementById('result').innerHTML =
-          `<p>Word <span>${userString.toUpperCase()}</span> has a total of <span>${result.lengths}</span> characters.</p><p>Repeated letters: <span>${JSON.stringify(result.repeated)}</span></p><p>There are <span>${result.permutations.toLocaleString()}</span> permutations of the word <span>${userString.toUpperCase()}</span>.</p>`
+          return (document.getElementById(
+            "result"
+          ).innerHTML = `<p>Word <span>${userString.toUpperCase()}</span> has a total of <span>${
+            result.lengths
+          }</span> characters.</p><p>Repeated letters: <span>${JSON.stringify(
+            result.repeated
+          )}</span></p><p>There are <span>${result.permutations.toLocaleString()}</span> permutations of the word <span>${userString.toUpperCase()}</span>.</p>`);
+        }
       }
-    }
-
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>

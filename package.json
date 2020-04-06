@@ -1,6 +1,6 @@
 {
   "name": "word-permutation",
-  "version": "2.7.190618",
+  "version": "2.8.200406",
   "description": "Ways a word can permute.",
   "main": "word-permutation.js",
   "dependencies": {
