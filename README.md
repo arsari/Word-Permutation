@@ -2,11 +2,11 @@
 
 ---
 
-## MAT230 Discrete Mathematics<br/>October 2018
+## MAT230 Discrete Mathematics 18EW1<br/>October 2018
 
 ---
 
-[![Generic badge](https://img.shields.io/badge/language-JavaScript-blue.svg)](http://www.cplusplus.org/) [![Generic badge](https://img.shields.io/badge/technologies-HTML_|_CSS-green.svg)](https://www.w3shool.com) [![Generic badge](https://img.shields.io/badge/Runtime-Node.js-darkred.svg)](https://www.nodejs.org) [![Generic badge](https://img.shields.io/badge/ide-VS_Code-purple.svg)](https://www.vscode.com/) [![Generic badge](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE)
+[![Generic badge](https://img.shields.io/badge/language-JavaScript-blue.svg)](http://www.cplusplus.org/) [![Generic badge](https://img.shields.io/badge/technologies-HTML_|_CSS-green.svg)](https://www.w3shool.com) [![Generic badge](https://img.shields.io/badge/runtime-Node.js-darkred.svg)](https://www.nodejs.org) [![Generic badge](https://img.shields.io/badge/ide-VS_Code-purple.svg)](https://www.vscode.com/) [![Generic badge](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE)
 
 ### Purpose
 
@@ -26,4 +26,4 @@ _For browser version visit `https://arsari.github.io/Word-Permutation/`_
 
 ---
 
-_[Last Update June 2021 by ASR]_
+<small>_[Last Update June 2021 by ASR]_</small>
