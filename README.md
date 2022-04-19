@@ -6,7 +6,7 @@
 
 ---
 
-[![Generic badge](https://img.shields.io/badge/language-JavaScript-blue.svg)](http://www.cplusplus.org/) [![Generic badge](https://img.shields.io/badge/technologies-HTML_|_CSS-green.svg)](https://www.w3shool.com) [![Generic badge](https://img.shields.io/badge/runtime-Node.js-darkred.svg)](https://www.nodejs.org) [![Generic badge](https://img.shields.io/badge/ide-VS_Code-purple.svg)](https://www.vscode.com/) [![Generic badge](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE)
+[![Generic badge](https://img.shields.io/badge/language-JavaScript-blue.svg)](http://www.cplusplus.org/) [![Generic badge](https://img.shields.io/badge/technologies-HTML_|_CSS-green.svg)](https://www.w3shool.com) [![Generic badge](https://img.shields.io/badge/runtime-Node.js-darkred.svg)](https://www.nodejs.org) [![Generic badge](https://img.shields.io/badge/ide-VS_Code-purple.svg)](https://www.vscode.com/) [![Generic badge](https://img.shields.io/badge/license-MIT-red.svg)](LICENSE)
 
 ### Purpose
 
@@ -20,10 +20,8 @@ _For browser version visit `https://arsari.github.io/Word-Permutation/`_
 
 ---
 
-## License
-
-[MIT](LICENSE)
+[![SNHU Private Repository](https://img.shields.io/badge/repo-SNHU-blueviolet.svg?style=for-the-badge&logo=github)](https://github.com/arsari/arsari-snhu "Back to SNHU Private Repo") [![License badge](https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge&logo=github)](LICENSE "GitHub MIT License")
 
 ---
 
-<small>_[Last Update June 2021 by ASR]_</small>
+<small>_[Updated April, 2022 by ASR]_</small>
