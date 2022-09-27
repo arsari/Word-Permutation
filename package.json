@@ -4,9 +4,8 @@
   "description": "Ways a word can permute.",
   "main": "word-permutation.js",
   "dependencies": {
-    "prompt": "^1.0.0"
+    "prompt": "^1.3.0"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "node word-permutation",
     "test": "echo \"Error: no test specified\" && exit 1"
